@@ -46,9 +46,31 @@
   .fig{float:none;width:100%;max-width:450px;margin:0 auto 24px;padding:0}
   .fig img{max-width:100%;height:auto}
 }
+
+/* v1.1.1: red starburst edge on desktop and mobile */
+.sfnbadge::before{background:#bf303a}
+.mobile-sfnbadge{display:none}
+@media (max-width:600px){
+  .mastin{position:relative;display:flex;align-items:flex-start;align-content:flex-start;flex-direction:column;justify-content:flex-start;flex-wrap:nowrap;min-height:138px;padding:20px 160px 17px 20px;gap:14px}
+  .brand{font-size:21px;max-width:100%}
+  .brand small{font-size:10px;line-height:1.45}
+  .nav{margin:0;gap:15px}
+  .mobile-sfnbadge{display:block;position:absolute;right:8px;top:5px;width:142px;height:126px}
+  .mobile-sfnbadge .sfnbadge{position:relative;inset:auto;width:142px;height:126px;max-width:none;padding:18px;margin:0;align-self:auto}
+  .mobile-sfnbadge .sfnbadge .row1{font-size:10.5px;line-height:1.18}
+  .mobile-sfnbadge .sfnbadge .row2{font-size:9px;line-height:1.2;margin-top:5px}
+  .topline .sfnbadge{display:none}
+  .herohead .topline{display:block}
+  .herohead h1{max-width:100%;font-size:clamp(28px,7.6vw,34px)}
+}
+@media (max-width:360px){
+  .mastin{padding-right:148px}
+  .mobile-sfnbadge{right:3px}
+  .brand{font-size:19px}
+}
 </style></head><body>
 
-<header class="mast"><div class="mastin"><div class="brand">UPS Research<small>Computational Biology &amp; Neurodegeneration</small></div><nav class="nav"><a href="#overview">Research</a></nav></div><div class="stripe"></div></header>
+<header class="mast"><div class="mastin"><div class="brand">UPS Research<small>Computational Biology &amp; Neurodegeneration</small></div><div class="mobile-sfnbadge" aria-hidden="true"><div class="sfnbadge"><div class="badgecopy"><div class="row1">Come see us at SfN</div><div class="row2">Presenting Sunday Nov xx at Booth #xxx</div></div></div></div><nav class="nav"><a href="#overview">Research</a></nav></div><div class="stripe"></div></header>
 <main class="main"><div class="herohead"><div class="topline"><div class="crumb">Research / Ubiquitin–Proteasome System</div><div class="sfnbadge"><div class="badgecopy"><div class="row1">Come see us at SfN</div><div class="row2">Presenting Sunday Nov xx at Booth #xxx</div></div></div></div><h1>A Reproducible MCI-Centered Ubiquitin–Proteasome Transcriptional Signature</h1><p class="dek">Peripheral blood gene expression across Alzheimer's disease progression</p><p class="authors">Maya Afergan · Arij Daou &nbsp; | &nbsp; Research in progress</p></div>
 <div class="columns"><aside class="side"><h3>Research</h3><a class="active" href="#overview">Project overview</a></aside>
 <article class="content" id="overview"><h2>Research overview</h2>
@@ -59,5 +81,5 @@
 <p id="results">Across the three datasets, UPS genes exhibited larger MCI-centered deviations than matched non-UPS genes. The signal was driven primarily by MCI-centered reductions, or “valleys,” rather than increases. Signed UPS deviations also showed substantial concordance across cohorts. An analysis of 876 Gene Ontology Biological Process gene sets placed UPS-related effects among the strongest cross-dataset patterns.</p>
 <p>These observations motivate additional studies of proteostasis-related transcription in cognitive impairment, including longitudinal validation. The findings concern peripheral blood transcription and should not be interpreted as direct measurements of UPS protein activity in the brain.</p>
 </article></div></main>
-<footer style="max-width:1170px;margin:0 auto;padding:14px 26px 24px;border-top:1px solid #e0e6eb;text-align:right;color:#728293;font:12px Arial,Helvetica,sans-serif">Site version: v1.1.0</footer>
+<footer style="max-width:1170px;margin:0 auto;padding:14px 26px 24px;border-top:1px solid #e0e6eb;text-align:right;color:#728293;font:12px Arial,Helvetica,sans-serif">Site version: v1.1.1</footer>
 </body></html>
