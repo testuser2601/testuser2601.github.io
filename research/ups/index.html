@@ -23,6 +23,29 @@
 .herohead h1{max-width:calc(100% - 245px)}
 @media(max-width:850px){.topline .sfnbadge{position:absolute;top:32px;right:0;width:166px;height:135px;padding:20px}.herohead h1{max-width:calc(100% - 180px)}.topline .sfnbadge .row1{font-size:11px}.topline .sfnbadge .row2{font-size:10px}}
 @media(max-width:600px){.topline{margin-bottom:17px}.topline .sfnbadge{position:relative;top:auto;right:auto;margin:8px 0 16px auto;width:170px;height:139px}.herohead h1{max-width:none}}
+
+/* Mobile-only layout: restore a clear title-first reading order. */
+@media (max-width:600px){
+  html,body{max-width:100%;overflow-x:hidden}
+  .mastin{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;padding:19px 20px}
+  .brand{font-size:22px;line-height:1.2}
+  .brand small{font-size:10px;letter-spacing:.08em;margin-top:5px}
+  .nav{margin:0;gap:14px;font-size:13px}
+  .main{padding:25px 20px 55px}
+  .herohead{display:flex;flex-direction:column}
+  .topline{display:contents}
+  .topline .crumb{order:0;font-size:11px;line-height:1.4;margin:0 0 15px}
+  .herohead h1{order:1;max-width:100%;font-size:clamp(28px,7.6vw,34px);line-height:1.19;margin:0 0 16px;overflow-wrap:break-word}
+  .herohead .dek{order:2;font-size:16px;line-height:1.45;margin-bottom:11px}
+  .herohead .authors{order:3;font-size:13px;line-height:1.45;margin-bottom:23px}
+  .topline .sfnbadge{order:4;position:relative;inset:auto;align-self:center;width:170px;height:139px;margin:0 auto 23px;padding:20px}
+  .columns{display:block;padding-top:23px}
+  .side{display:none}
+  .content h2{font-size:25px;line-height:1.25}
+  .content p{font-size:15.5px;line-height:1.68}
+  .fig{float:none;width:100%;max-width:450px;margin:0 auto 24px;padding:0}
+  .fig img{max-width:100%;height:auto}
+}
 </style></head><body>
 
 <header class="mast"><div class="mastin"><div class="brand">UPS Research<small>Computational Biology &amp; Neurodegeneration</small></div><nav class="nav"><a href="#overview">Research</a></nav></div><div class="stripe"></div></header>
