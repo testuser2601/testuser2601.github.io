@@ -70,7 +70,7 @@
 }
 </style></head><body>
 
-<header class="mast"><div class="mastin"><div class="brand">UPS Research<small>Computational Biology &amp; Neurodegeneration</small></div><div class="mobile-sfnbadge" aria-hidden="true"><div class="sfnbadge"><div class="badgecopy"><div class="row1">Come see us at SfN</div><div class="row2">Sunday, Nov 15<br>11 a.m.–noon ET<br>WCC Halls A–C<br>Board A42</div></div></div></div><nav class="nav"><a href="#overview">Research</a></nav></div><div class="stripe"></div></header>
+<header class="mast"><div class="mastin"><div class="brand">UPS Research<small>Computational Biology &amp; Neurodegeneration</small></div><div class="mobile-sfnbadge"></div><nav class="nav"><a href="#overview">Research</a></nav></div><div class="stripe"></div></header>
 <main class="main"><div class="herohead"><div class="topline"><div class="crumb">Research / Ubiquitin–Proteasome System</div><div class="sfnbadge"><div class="badgecopy"><div class="row1">Come see us at SfN</div><div class="row2">Sunday, Nov 15<br>11 a.m.–noon ET<br>WCC Halls A–C<br>Board A42</div></div></div></div><h1>A Reproducible MCI-Centered Ubiquitin–Proteasome Transcriptional Signature</h1><p class="dek">Peripheral blood gene expression across Alzheimer's disease progression</p><p class="authors">Maya Afergan · Arij Daou &nbsp; | &nbsp; Research in progress</p></div>
 <div class="columns"><aside class="side"><h3>Research</h3><a class="active" href="#overview">Project overview</a></aside>
 <article class="content" id="overview"><h2>Research overview</h2>
@@ -81,5 +81,18 @@
 <p id="results">Across the three datasets, UPS genes exhibited larger MCI-centered deviations than matched non-UPS genes. The signal was driven primarily by MCI-centered reductions, or “valleys,” rather than increases. Signed UPS deviations also showed substantial concordance across cohorts. An analysis of 876 Gene Ontology Biological Process gene sets placed UPS-related effects among the strongest cross-dataset patterns.</p>
 <p>These observations motivate additional studies of proteostasis-related transcription in cognitive impairment, including longitudinal validation. The findings concern peripheral blood transcription and should not be interpreted as direct measurements of UPS protein activity in the brain.</p>
 </article></div></main>
-<footer style="max-width:1170px;margin:0 auto;padding:14px 26px 24px;border-top:1px solid #e0e6eb;text-align:right;color:#728293;font:12px Arial,Helvetica,sans-serif">Site version: v1.1.3</footer>
+<footer style="max-width:1170px;margin:0 auto;padding:14px 26px 24px;border-top:1px solid #e0e6eb;text-align:right;color:#728293;font:12px Arial,Helvetica,sans-serif">Site version: v1.1.4</footer>
+<script>
+(() => {
+  const badge = document.querySelector('.sfnbadge');
+  const desktopSlot = document.querySelector('.topline');
+  const mobileSlot = document.querySelector('.mobile-sfnbadge');
+  const mobile = window.matchMedia('(max-width:600px)');
+  function positionBadge() {
+    (mobile.matches ? mobileSlot : desktopSlot).appendChild(badge);
+  }
+  positionBadge();
+  mobile.addEventListener('change', positionBadge);
+})();
+</script>
 </body></html>
