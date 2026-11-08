@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>UPS research brief</title></head><body>
+<script>
+(async function () {
+ const response = await fetch('/stage-8deab2378cbce8194b1961cb/brief/index.html');
+ if (!response.ok) throw new Error('Unable to load research brief');
+ let html = await response.text();
+ const thesis = 'UPS-related transcription shows an unusually strong and reproducible MCI-centered pattern across three blood datasets, driven primarily by MCI-centered reductions and ranking among the strongest GO pathway effects.';
+ const findings = [
+ 'UPS genes show larger MCI-centered deviations than expression-matched non-UPS genes across all three datasets.',
+ 'Valley enrichment exceeded peak enrichment in all three datasets, indicating that the UPS signal is driven primarily by MCI-centered reductions rather than increases.',
+ 'Only 3 of 876 GO Biological Process pathways were significant in all three datasets, and 2 substantially overlapped with UPS. UPS ranked in the top 5% by cross-dataset effect magnitude.'
+ ];
+ if (!html.includes('class="brief-intro"') || !html.includes('class="brief-findings"')) throw new Error('Research brief structure changed');
+ html = html.replace(/<p class="brief-intro">[\s\S]*?<\/p>/, '<p class="brief-intro">'+thesis+'</p>');
+ html = html.replace(/<ol class="brief-findings">[\s\S]*?<\/ol>/, '<ol class="brief-findings">'+findings.map(text => '<li>'+text+'</li>').join('')+'</ol>');
+ html = html.replace('Local preview · Research brief · B / v003', 'Research brief · Compact / v004');
+ document.open(); document.write(html); document.close();
+})().catch(function(error) { document.body.textContent = error.message; });
+</script><noscript>Please enable JavaScript to view this research brief.</noscript></body></html>
