@@ -1,0 +1,1 @@
+Maya compact site v006 staging assets. Upload sequence: index.html and assets/figure-1.png through figure-4.png. This is a staging-only directory; production is unchanged.
