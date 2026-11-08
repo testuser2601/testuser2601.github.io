@@ -1,0 +1,1 @@
+Maya compact research site staging v007. Upload index.html to this directory and figure-1.png, figure-2.png, figure-3.png, figure-4.jpg into assets/. Production unchanged.
